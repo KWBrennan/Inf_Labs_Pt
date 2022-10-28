@@ -1,0 +1,172 @@
+Python
+
+
+
+def task1(): 
+	x = int(input())
+	if x >= 10:
+	    y = x//10
+	else:
+	    y = -1
+	return(y)
+
+
+
+def task2(): 
+	s = str(input())
+	s = s.replace(' ','')
+	for j in range(0, 9):
+  		s = s.replace(str(j), '')
+	l = len(s)
+	l_prv = l // 2
+	s_lev = s[:l // 2]
+	s_prv = s[l // 2:]
+	s_prv_rev = str()
+	for i in range(1, l_prv + 1):
+		s_prv_rev += s_prv[-1 * i]
+	return(bool(s_lev == s_prv_rev))
+
+
+
+def task7(): 
+	s = str(input())
+	s = s.split('.')
+	x = 0
+	y = 1
+	if int(s[1]) > 12 or int(s[1]) < 1:
+	    x = 0
+	elif int(s[2]) < 1:
+	    x = 0
+	elif int(s[1]) == 1 and int(s[2]) > 31:
+	    x = 0
+	elif int(s[1]) == 3 and int(s[2]) > 31:
+	    x = 0
+	elif int(s[1]) == 5 and int(s[2]) > 31:
+	    x = 0
+	elif int(s[1]) == 7 and int(s[2]) > 31:
+	    x = 0
+	elif int(s[1]) == 8 and int(s[2]) > 31:
+	    x = 0
+	elif int(s[1]) == 10 and int(s[2]) > 31:
+  	  x = 0
+	elif int(s[1]) == 12 and int(s[2]) > 31:
+ 	   x = 0
+	elif int(s[1]) == 4 and int(s[2]) > 30:
+    x = 0
+	elif int(s[1]) == 6 and int(s[2]) > 30:
+ 	   x = 0
+	elif int(s[1]) == 9 and int(s[2]) > 30:
+	    x = 0
+	elif int(s[1]) == 11 and int(s[2]) > 30:
+ 	   x = 0
+	elif int(s[1]) == 2 and int(s[2]) > 28 and int(s[0]) % 4 != 0:
+	    x = 0
+	elif int(s[1]) == 2 and int(s[2]) > 29 and int(s[0]) % 4 == 0:
+	    x = 0
+	else:
+	    x = 1
+	return(bool(x == y))
+
+
+
+def task5(): 
+	n = int(input())
+	Ans = []
+	d = 2
+	while d * d <= n:
+	    if n % d == 0:
+	       Ans.append(d)
+ 	       n //= d
+ 	   else:
+ 	       d += 1
+	if n > 1:
+	    Ans.append(n)
+	l = len(Ans)
+	c = 0
+	n = Ans
+	for i in Ans:
+ 	   curr_fr = Ans.count(i)
+ 	   if(curr_fr> c):
+  	      c = curr_fr
+  	      n = i
+	klmn = Ans.count(n)
+	return(klmn)
+
+
+
+def task6(): 
+	s = str(input())
+	l = len(s)
+	n = float(s)
+	if '.' in s:
+	    ds = s.split('.')
+	    dl = len(ds[1])
+	    n = n - 10**-dl
+	else:
+	    n = int(n - 1)
+	return(str(n))
+
+
+
+Numpy
+
+
+
+def task1(): 
+	import numpy as np
+	a_ = list(input())
+	b_ = list(input())
+	a = np.array(a_)
+	b = np.array(b_)
+	pr = float(a[0]) * float(b[0]) + float(a[1]) * float(b[1]) + float(a[2]) * float(b[2])
+	dl = np.sqrt(float(a[0]) ** 2 + float(a[1]) ** 2 + float(a[2]) ** 2) * np.sqrt(float(b[0]) ** 2 + float(b[1]) ** 2 + 	float(b[2]) ** 2)
+	cos_degree = pr / dl
+	degree = (np.arccos(cos_degree) * 180) / np.pi
+	return(round(degree, 2))
+
+
+
+
+def task2(): 
+	n = int(input())
+	p = list(str(n))
+	if len(p) == 1:
+	    e = 1
+	c = 0
+	for i in p:
+	    curr_fr = p.count(i)
+	    if(curr_fr> c):
+	        c = curr_fr
+	        n = i
+	klmn = p.count(n)
+	peres = 0
+	for i in range(0,len(p)):
+ 	   j = i + 1
+	    for j in range(j, len(p)):
+	        if p[i] > p[j]: 
+ 	           peres = peres + 1
+	if (peres % 2) == 0:
+	    e = 1
+	else:
+	    e = -1
+	if klmn > 1:
+  	  e = 0
+	return(e)
+
+
+
+def task5(): 
+	A = np.array([[1,2,3],[4,5,6]])
+	B = np.array([[1,2],[3,4],[5,6]])
+	ans = np.dot(A, B)
+	return(ans)
+
+
+
+Pandas
+
+
+
+def task1(): 
+
+
