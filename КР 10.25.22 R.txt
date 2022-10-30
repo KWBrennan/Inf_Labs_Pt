@@ -2,7 +2,7 @@ Python
 
 
 
-def task1(): 
+def task1_p(): 
 	x = int(input())
 	if x >= 10:
 	    y = x//10
@@ -12,7 +12,7 @@ def task1():
 
 
 
-def task2(): 
+def task2_p(): 
 	s = str(input())
 	s = s.replace(' ','')
 	for j in range(0, 9):
@@ -28,7 +28,7 @@ def task2():
 
 
 
-def task7(): 
+def task7_p(): 
 	s = str(input())
 	s = s.split('.')
 	x = 0
@@ -52,7 +52,7 @@ def task7():
 	elif int(s[1]) == 12 and int(s[2]) > 31:
  	   x = 0
 	elif int(s[1]) == 4 and int(s[2]) > 30:
-    x = 0
+	   x = 0
 	elif int(s[1]) == 6 and int(s[2]) > 30:
  	   x = 0
 	elif int(s[1]) == 9 and int(s[2]) > 30:
@@ -69,7 +69,7 @@ def task7():
 
 
 
-def task5(): 
+def task5_p(): 
 	n = int(input())
 	Ans = []
 	d = 2
@@ -94,7 +94,7 @@ def task5():
 
 
 
-def task6(): 
+def task6_p(): 
 	s = str(input())
 	l = len(s)
 	n = float(s)
@@ -112,7 +112,7 @@ Numpy
 
 
 
-def task1(): 
+def task1_n(): 
 	import numpy as np
 	a_ = list(input())
 	b_ = list(input())
@@ -127,7 +127,7 @@ def task1():
 
 
 
-def task2(): 
+def task2_n(): 
 	n = int(input())
 	p = list(str(n))
 	if len(p) == 1:
@@ -155,7 +155,7 @@ def task2():
 
 
 
-def task5(): 
+def task5_n(): 
 	A = np.array([[1,2,3],[4,5,6]])
 	B = np.array([[1,2],[3,4],[5,6]])
 	ans = np.dot(A, B)
@@ -167,7 +167,7 @@ Pandas
 
 
 
-def task1(): 
+def task1_d(): 
 	import pandas as pd
 	df = pd.read_csv('use.csv')
 	no = df.isna().sum()
@@ -189,7 +189,7 @@ def task1():
 
 
 
-def task2():
+def task2_d():
 	import pandas as pd
 	df = pd.read_csv('use.csv')
 	ans = df['Математика'].mean()
@@ -197,7 +197,7 @@ def task2():
 
 
 
-def task3():
+def task3_d():
 	import pandas as pd
 	df = pd.read_csv('use.csv')
 	l = len(df)
